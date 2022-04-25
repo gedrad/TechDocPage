@@ -1,0 +1,91 @@
+html {
+    font-size: 16px;
+    box-sizing: border-box;  
+}
+
+body {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "navig content content";
+    gap: 1.5rem;
+    margin: 1rem 1rem 3rem 1rem;
+}
+
+nav {
+    grid-area: navig;
+    border-right: 0.1rem solid;
+}
+
+main {
+    grid-area: content;
+}
+
+nav#navbar {
+    height: auto;
+}
+
+#navbar header { 
+border-bottom: 0.1rem solid ;
+text-transform: uppercase;
+}
+
+#navbar li {
+    padding-top: 1.8rem;
+    font-size: 1em;
+    text-transform: uppercase;
+    border-bottom: 0.1rem solid;
+    padding-bottom: 0.7rem;
+}
+
+#navbar ul li {
+    list-style-type: none;
+}
+
+#navbar li a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+code {
+    background-color: rgb(236, 225, 225);
+    border-radius: 3px;
+    font-family: courier, monospace;
+    padding: 1px 3px;
+}
+
+#Subjects_covered li, #The_learning_pathway li {
+   padding-top: 0.7rem;
+   font-size: 1.2rem;
+   font-weight: 500;
+}
+
+@media only screen and (max-width: 768px){
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 1fr;
+        grid-template-areas: "navig"
+                              "content";
+    }
+
+    nav {
+        border-right: none;
+    }
+}
